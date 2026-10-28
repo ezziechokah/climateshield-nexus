@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "ClimateShield Nexus",
+    "slug": "climateshield-nexus",
+    "scheme": "climateshield",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      ["expo-sqlite", { "enableFTS": false }],
+      ["expo-location", { "locationWhenInUsePermission": "Allow ClimateShield Nexus to use your location when you request farm coordinates." }]
+    ],
+    "android": { "package": "org.climateshield.nexus" },
+    "experiments": { "typedRoutes": true }
+  }
+}

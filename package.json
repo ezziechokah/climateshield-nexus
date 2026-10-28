@@ -1,0 +1,21 @@
+{
+  "name": "climateshield-nexus",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@12.15.0",
+  "engines": {
+    "node": ">=24.14.1"
+  },
+  "scripts": {
+    "dev": "corepack pnpm --filter @climateshield/contracts --filter @climateshield/climate-engine build && corepack pnpm --recursive --parallel --if-present dev",
+    "dev:api": "corepack pnpm --filter @climateshield/contracts --filter @climateshield/climate-engine build && corepack pnpm --filter @climateshield/api dev",
+    "dev:web": "corepack pnpm --filter @climateshield/web dev",
+    "dev:mobile": "corepack pnpm --filter @climateshield/mobile dev",
+    "db:up": "docker compose up -d postgres redis",
+    "db:down": "docker compose down",
+    "build": "corepack pnpm --recursive --if-present build",
+    "lint": "corepack pnpm --recursive --if-present lint",
+    "typecheck": "corepack pnpm --recursive --if-present typecheck",
+    "test": "corepack pnpm --recursive --if-present test"
+  }
+}
